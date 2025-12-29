@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>偶像心理測驗</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 30px;
+            background: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #e03570;
+        }
+        .result {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .idol-list {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>偶像心理測驗</h1>
+        <form id="quizForm">
+            <!-- 以下示範加入三十題，可依照模板增加 -->
+            <!-- 題目 1 -->
+            <div class="question">
+                <h2>1. 你在陌生場合通常會？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> 主動聊天</label>
+                    <label><input type="radio" name="q1" value="B"> 等別人找你</label>
+                    <label><input type="radio" name="q1" value="C"> 找熟人</label>
+                    <label><input type="radio" name="q1" value="D"> 玩手機</label>
+                </div>
+            </div>
+
+            <!-- 題目 2 -->
+            <div class="question">
+                <h2>2. 當你有空的一天，你最想做？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> 出門玩</label>
+                    <label><input type="radio" name="q2" value="B"> 看劇</label>
+                    <label><input type="radio" name="q2" value="C"> 做興趣</label>
+                    <label><input type="radio" name="q2" value="D"> 睡覺</label>
+                </div>
+            </div>
+
+            <!-- 題目 3 -->
+            <div class="question">
+                <h2>3. 朋友形容你比較像？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> 開心果</label>
+                    <label><input type="radio" name="q3" value="B"> 軍師</label>
+                    <label><input type="radio" name="q3" value="C"> 傾聽者</label>
+                    <label><input type="radio" name="q3" value="D"> 自由人</label>
+                </div>
+            </div>
+
+            <!-- 題目 4 -->
+            <div class="question">
+                <h2>4. 你做決定時比較依賴？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> 直覺</label>
+                    <label><input type="radio" name="q4" value="B"> 邏輯</label>
+                    <label><input type="radio" name="q4" value="C"> 他人意見</label>
+                    <label><input type="radio" name="q4" value="D"> 感覺當下</label>
+                </div>
+            </div>
+
+            <!-- 題目 5 -->
+            <div class="question">
+                <h2>5. 你比較怕的是？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> 無聊</label>
+                    <label><input type="radio" name="q5" value="B"> 失敗</label>
+                    <label><input type="radio" name="q5" value="C"> 被拒絕</label>
+                    <label><input type="radio" name="q5" value="D"> 被限制</label>
+                </div>
+            </div>
+
+            <!-- 題目 6 -->
+            <div class="question">
+                <h2>6. 朋友難過時你會？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> 安慰</label>
+                    <label><input type="radio" name="q6" value="B"> 給建議</label>
+                    <label><input type="radio" name="q6" value="C"> 陪著</label>
+                    <label><input type="radio" name="q6" value="D"> 轉移注意</label>
+                </div>
+            </div>
+
+            <!-- 題目 7 -->
+            <div class="question">
+                <h2>7. 你覺得最重要的關係品質是？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> 信任</label>
+                    <label><input type="radio" name="q7" value="B"> 有趣</label>
+                    <label><input type="radio" name="q7" value="C"> 安全感</label>
+                    <label><input type="radio" name="q7" value="D"> 自由</label>
+                </div>
+            </div>
+
+            <!-- 題目 8 -->
+            <div class="question">
+                <h2>8. 如果被誤會你會？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> 解釋清楚</label>
+                    <label><input type="radio" name="q8" value="B"> 算了</label>
+                    <label><input type="radio" name="q8" value="C"> 生悶氣</label>
+                    <label><input type="radio" name="q8" value="D"> 找人說</label>
+                </div>
+            </div>
+
+            <!-- 題目 9 -->
+            <div class="question">
+                <h2>9. 你比較容易對誰有好感？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> 幽默的人</label>
+                    <label><input type="radio" name="q9" value="B"> 溫柔的人</label>
+                    <label><input type="radio" name="q9" value="C"> 聰明的人</label>
+                    <label><input type="radio" name="q9" value="D"> 神秘的人</label>
+                </div>
+            </div>
+
+            <!-- 題目 10 -->
+            <div class="question">
+                <h2>10. 當有人冷淡你時你會？</h2>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> 主動關心</label>
+                    <label><input type="radio" name="q10" value="B"> 退一步</label>
+                    <label><input type="radio" name="q10" value="C"> 很在意</label>
+                    <label><input type="radio" name="q10" value="D"> 當沒事</label>
+                </div>
+            </div>
+
+            <!-- 題目 11-30 可依模板自行增加 -->
+            <!-- 為了示範這裡先只放前10題，你可自行複製題目區塊增加到30題 -->
+
+            <button type="button" onclick="calculateResult()">提交答案</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const idolMapping = {
+            // 示範前10題
+            "q1": {"A": {type:"活潑社交型", idols:["TWICE - Cheer Up / TT","Red Velvet - Red Flavor"]},
+                   "B": {type:"觀察型", idols:["NewJeans - Hype Boy","STAYC - ASAP"]},
+                   "C": {type:"親切甜美型", idols:["Red Velvet - Bad Boy","fromis_9 - Love Bomb"]},
+                   "D": {type:"自信獨立型", idols:["ITZY - DALLA DALLA","BLACKPINK - DDU-DU DDU-DU"]}},
+            "q2": {"A": {type:"活潑社交型", idols:["TWICE - Cheer Up","aespa - Savage"]},
+                   "B": {type:"觀察型", idols:["STAYC - Teddy Bear"]},
+                   "C": {type:"親切甜美型", idols:["NewJeans - Attention"]},
+                   "D": {type:"自信獨立型", idols:["LE SSERAFIM - ANTIFRAGILE"]}},
+            "q3": {"A": {type:"努力型", idols:["SEVENTEEN - Very Nice / Super"]},
+                   "B": {type:"輕快甜美型", idols:["fromis_9 - Love Bomb"]},
+                   "C": {type:"安心少年感型", idols:["TXT - Crown / 0X1=LOVESONG"]},
+                   "D": {type:"強勢Girl crush型", idols:["BLACKPINK - Kill This Love","ITZY - WANNABE"]}},
+            "q4": {"A": {type:"直覺型", idols:["aespa - Next Level"]},
+                   "B": {type:"邏輯型", idols:["MAMAMOO - HIP"]},
+                   "C": {type:"依賴型", idols:["Red Velvet - Psycho"]},
+                   "D": {type:"感性型", idols:["NewJeans - Super Shy"]}},
+            "q5": {"A": {type:"無聊型", idols:["fromis_9 - DM"]},
+                   "B": {type:"焦慮型", idols:["SEVENTEEN - Don’t Wanna Cry"]},
+                   "C": {type:"敏感型", idols:["TWICE - TT"]},
+                   "D": {type:"被限制型", idols:["BLACKPINK - Pink Venom"]}},
+            "q6": {"A": {type:"安慰型", idols:["Red Velvet - Red Flavor"]},
+                   "B": {type:"建議型", idols:["MAMAMOO - Starry Night"]},
+                   "C": {type:"陪伴型", idols:["TXT - Sugar Rush Ride"]},
+                   "D": {type:"轉移注意型", idols:["ITZY - Loco"]}},
+            "q7": {"A": {type:"信任型", idols:["GFRIEND - Rough"]},
+                   "B": {type:"趣味型", idols:["TWICE - Fancy"]},
+                   "C": {type:"安全感型", idols:["TXT - Crown"]},
+                   "D": {type:"自由型", idols:["BLACKPINK - Kill This Love"]}},
+            "q8": {"A": {type:"解釋型", idols:["Red Velvet - Bad Boy"]},
+                   "B": {type:"算了型", idols:["NewJeans - Attention"]},
+                   "C": {type:"悶氣型", idols:["ITZY - WANNABE"]},
+                   "D": {type:"找人說型", idols:["aespa - Drama"]}},
+            "q9": {"A": {type:"幽默型", idols:["TWICE - TT"]},
+                   "B": {type:"溫柔型", idols:["fromis_9 - Love Bomb"]},
+                   "C": {type:"聰明型", idols:["MAMAMOO - Egotistic"]},
+                   "D": {type:"神秘型", idols:["LE SSERAFIM - FEARLESS"]}},
+            "q10": {"A": {type:"關心型", idols:["Red Velvet - Red Flavor"]},
+                   "B": {type:"退讓型", idols:["STAYC - ASAP"]},
+                   "C": {type:"在意型", idols:["TXT - 0X1=LOVESONG"]},
+                   "D": {type:"無所謂型", idols:["BLACKPINK - DDU-DU DDU-DU"]}}
+        };
+
+        function calculateResult() {
+            const form = document.getElementById("quizForm");
+            let score = {};
+            let selections = {};
+
+            for (let i=1; i<=10; i++){
+                const q = form["q"+i].value;
+                if(!q){
+                    alert("請完成所有題目！");
+                    return;
+                }
+                const mapping = idolMapping["q"+i][q];
+                if(mapping){
+                    if(!score[mapping.type]) score[mapping.type] = 0;
+                    score[mapping.type]++;
+                    selections[mapping.type] = mapping.idols;
+                }
+            }
+
+            let maxScore = 0;
+            let resultType = "";
+            for(let type in score){
+                if(score[type] > maxScore){
+                    maxScore = score[type];
+                    resultType = type;
+                }
+            }
+
+            const idols = selections[resultType].join(" / ");
+            document.getElementById("result").innerHTML = `<h2>你的偶像人格類型：${resultType}</h2>
+                <div class="idol-list">推薦偶像：${idols}</div>`;
+        }
+    </script>
+</body>
+</html>
